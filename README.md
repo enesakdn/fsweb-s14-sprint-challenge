@@ -23,7 +23,7 @@ Bu projede size bir dizi gereksinim verilecek ve bunları karşılamak için bir
 
 ### Gerekli Bağımlılıklar
 
-Projenin çalışması için bazı ek NPM bağımlılıklarına ihtiyacın olabilir. 
+Projenin çalışması için bazı ek NPM bağımlılıklarına ihtiyacın olabilir.
 
 ### Gerekli Komut Dosyaları
 
@@ -31,7 +31,7 @@ Projenin çalışması için bazı ek NPM bağımlılıklarına ihtiyacın olabi
 
 ### Gerekli Tablolar
 
-Uygun veri türlerini ve kısıtlamaları kullanarak migrationları Knex'te "data/migrations" klasörü içinde oluşturun. **Aşağıda açıklanan tablo adlarını ve sütun adlarını kullanmalısınız.** 
+Uygun veri türlerini ve kısıtlamaları kullanarak migrationları Knex'te "data/migrations" klasörü içinde oluşturun. **Aşağıda açıklanan tablo adlarını ve sütun adlarını kullanmalısınız.**
 İpucu: Birincil anahtara "id"den farklı bir ad vermek için "table.increments()" yerine "table.increments("project_id")" yapabilirsin.
 
 - [ ] Bir **proje**, yapılması gereken şeydir ve aşağıdaki sütunları içeren bir "projects" tablosunda saklanır:
@@ -62,20 +62,25 @@ Uygun veri türlerini ve kısıtlamaları kullanarak migrationları Knex'te "dat
 "api" klasörünün içinde aşağıdakiler için uç noktaları olan bir API oluşturun:
 
 - [ ] `[POST] /api/resources`
+
   - Yanıt gövdesi örneği: `{"resource_id":1,"resource_name":"foo","resource_description":null}`
 
 - [ ] `[GET] /api/resources`
+
   - Yanıt gövdesi örneği: `[{"resource_id":1,"resource_name":"foo","resource_description":null}]`
 
 - [ ] `[POST] /api/projects`
+
   - `project_completed` bir tamsayı olarak saklansa da API, istemciyle etkileşim kurarken boolean'lar kullanır.
   - Yanıt gövdesi örneği: `{"project_id":1,"project_name":"bar","project_description":null,"project_completed":false}`
 
 - [ ] `[GET] /api/projects`
+
   - `project_completed` bir tamsayı olarak saklansa da API, istemciyle etkileşim kurarken boolean'lar kullanır.
   - Yanıt gövdesi örneği: `[{"project_id":1,"project_name":"bar","project_description":null,"project_completed":false}]`
 
 - [ ] `[POST] /api/tasks`
+
   - `task_completed` bir tamsayı olarak saklansa da API, istemciyle etkileşim kurarken boolean'lar kullanır.
   - Yanıt gövdesi örneği: `{"task_id":1,"task_description":"baz","task_notes":null,"task_completed":false,"project_id:1}`
 
